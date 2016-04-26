@@ -1,0 +1,18 @@
+#set ($page_title2 = "Cargado del archivo de propiedades")
+#set ($app_context="/SpringMVC")
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>$!page_title</title>
+		<link href="#springUrl('/resources/css/bootstrap.css')" rel="stylesheet" type="text/css" />
+		<link href="#springUrl('/resources/css/springmvc.css')" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+			#parse('/layout/header.vm')
+			<div id="content" class="container">
+				$screen_content
+			</div>
+			#parse('/layout/footer.vm')</footer>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+##<footer class="footer">
+##  <div class="container">
+##    <p class="text-muted">Place sticky footer content here.</p>
+##  </div>
+##</footer>
+
+<footer role="contentinfo" class="footer"> 
+	<div class="container"> 
+		<div class="col-sm-4">Quienes Somos</div>
+		<div class="col-sm-4">Contactanos</div>
+		<div class="col-sm-4">Siguenos</div>
+	</div> 
+</footer>
+
+<script src="#springUrl('/resources/js/jquery.js')" type="text/javascript"></script>
+<script src="#springUrl('/resources/js/bootstrap.js')" type="text/javascript"></script>

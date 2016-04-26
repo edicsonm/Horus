@@ -1,0 +1,73 @@
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- <a href="$!app_context" class="navbar-brand">
+ 	  	<img alt="Brand" src="#springUrl('/resources/img/horusIcon3.png')">
+      </a> -->
+    </div>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="$!app_context">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="dropdown">
+          <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider" role="separator"></li>
+            <li class="dropdown-header">Nav header</li>
+            <li><a href="#">Separated link</a></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+        <li class="dropdown">
+        	<a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Idioma<span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><span><img alt="Brand" src="#springUrl('/resources/img/colombia32.png')"><a href="?lang=es">Espa&ntildeol</a></span></li>
+	            <li><span><img alt="Brand" src="#springUrl('/resources/img/australia32.png')"><a href="?lang=en">English</a></span></li>
+	          </ul>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+<div id="content" class="banner">
+	<div class="container">
+		<div class="logoBanner">
+			<img alt="Brand" src="#springUrl('/resources/img/ImagenHorus4_140x140.png')">
+		</div>
+		<h1>Horus</h1>
+		<p>Estamos construyendo un software increible...</p>
+		ASD#springMessage('site.ourProducts')ASD
+		ASD<fmt:message key="site.ourProducts" />ASD
+		ASD<fmt:message key="site.ourProducts" />ASD
+		ASD<spring:message code="site.ourProducts" var="labelSubmit"></spring:message>ASD
+			
+		<!--<div class="col-sm-1">
+			<img alt="Brand" src="#springUrl('/resources/img/ImagenHorus90x90.png')">
+		</div>
+		<div class="col-sm-11">
+			<h1>Horus</h1>
+			<p>Estamos construyendo un software increible...</p>ASD
+		</div>-->
+		
+	</div>
+</div>
+
+
+    
