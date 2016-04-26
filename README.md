@@ -1,3 +1,3 @@
 # Horus
 
-## Repositorio de los fuentes del projecto Horus
+## Repositorio de los fuentes del proyecto Horus
