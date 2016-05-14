@@ -15,10 +15,10 @@
       Hello <b><c:out value="${pageContext.request.remoteUser}"/></b>
     </p>
     <c:url var="logoutUrl" value="/salir"/>
-    <form class="form-inline" action="${logoutUrl}" method="post">
+    <%-- <form class="form-inline" action="${logoutUrl}" method="post">
       <input type="submit" value="Log out" />
       <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-    </form>
+    </form> --%>
   </div>
 </body>
 </html>
