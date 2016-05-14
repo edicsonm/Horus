@@ -42,33 +42,10 @@
 	            <li><span><img alt="Brand" src="<c:url value='/resources/img/australia32.png' />"><a href="?lang=en"><fmt:message key="label.language.english" /></a></span></li>
 	          </ul>
         </li>
-        <li><a href="<c:url value="/main" />"><fmt:message key="label.login" /></a></li>
+        <li><a href="<c:url value="/logout" />"><fmt:message key="label.logout" /></a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
 </nav>
-
-<div id="content" class="banner">
-	<div class="container">
-		<div class="logoBanner">
-			<img alt="Brand" src="<c:url value='/resources/img/ImagenHorus4_140x140.png' />">
-		</div>
-		<h1><fmt:message key="site.title" /></h1>
-		<p><fmt:message key="site.banner.subtitle" /></p>
-		<%-- ASD<fmt:message key="site.ourProducts" />ASD
-		ASD<fmt:message key="site.ourProducts" />ASD
-		ASD<spring:message code="site.ourProducts" var="labelSubmit"></spring:message>ASD --%>
-			
-		<!--<div class="col-sm-1">
-			<img alt="Brand" src="#springUrl('/resources/img/ImagenHorus90x90.png')">
-		</div>
-		<div class="col-sm-11">
-			<h1>Horus</h1>
-			<p>Estamos construyendo un software increible...</p>ASD
-		</div>-->
-		
-	</div>
-</div>
-
 
     

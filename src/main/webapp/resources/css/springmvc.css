@@ -35,6 +35,19 @@ body {
     font-weight: 300;
 }
 
+.privateFooter {
+    background-color: #f5f5f5;
+    bottom: 0;
+    height: 60px;
+    position: absolute;
+    width: 100%;
+}
+
+.privateFooter > .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 15px 0;
+}
 
 .banner{
 	font-size: 24px;
