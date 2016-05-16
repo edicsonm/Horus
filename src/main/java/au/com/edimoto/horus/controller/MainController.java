@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class MainController {
 	
-	
 	private static final Logger logger = Logger.getLogger(MainController.class);
 	
 	@RequestMapping(value = {"/main" },method = RequestMethod.POST)
@@ -29,6 +28,12 @@ public class MainController {
 		model.addAttribute("title", "Main Page");
 		model.addAttribute("message", "This is the first page");
 		return "private/main";
+	}
+	
+	@RequestMapping(value = {"/dashBoard" },method = RequestMethod.GET)
+	public String dashBoard(Model model) {
+		logger.info("Ejecutando dashBoard Method");
+		return "private/transactionalReports/dashBoard";
 	}
 	
 	@RequestMapping(value = {"/" },method = RequestMethod.GET)

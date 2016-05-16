@@ -15,7 +15,12 @@
     </div>
     <div class="navbar-collapse collapse" id="navbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="<c:url value="/" />"><fmt:message key="label.home" /></a></li>
+        <li><a href="<c:url value="/" />"><fmt:message key="label.home" /></a></li>
+        <li><a href="<c:url value="/dashBoard" />"> <fmt:message key="label.transactionalReports"/></a></li>
+        <li><a href="#"><fmt:message key="label.onlineMonitor"/></a></li>
+        <li><a href="#"><fmt:message key="label.businessesIntelligence"/></a></li>
+        <li><a href="#"><fmt:message key="label.iseriesMonitor"/></a></li>
+        <!-- <li class="active"><a href="<c:url value="/" />"><fmt:message key="label.home" /></a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
         <li class="dropdown">
@@ -29,20 +34,22 @@
             <li><a href="#">Separated link</a></li>
             <li><a href="#">One more separated link</a></li>
           </ul>
-        </li>
+        </li> -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="../navbar/">Default</a></li>
-        <li><a href="../navbar-static-top/">Static top</a></li>
-        <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
-        <li class="dropdown">
+        <%-- <li><a href="../navbar/"> <fmt:message key="label.transactionalReports"/></a></li>
+        <li><a href="../navbar-static-top/"><fmt:message key="label.onlineMonitor"/></a></li>
+        <li><a href="../navbar-static-top/"><fmt:message key="label.businessesIntelligence"/></a></li>
+        <li><a href="../navbar-static-top/"><fmt:message key="label.iseriesMonitor"/></a></li> --%>
+        <%-- <li class="active"><a href="./"><fmt:message key="label.iseriesMonitor"/><span class="sr-only">(current)</span></a></li>
+         --%><li class="dropdown">
         	<a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#"><fmt:message key="label.language" /><span class="caret"></span></a>
 	          <ul class="dropdown-menu">
 	            <li><span><img alt="Brand" src="<c:url value='/resources/img/colombia32.png' />"><a href="?lang=es"><fmt:message key="label.language.espaniol" /></a></span></li>
 	            <li><span><img alt="Brand" src="<c:url value='/resources/img/australia32.png' />"><a href="?lang=en"><fmt:message key="label.language.english" /></a></span></li>
 	          </ul>
         </li>
-        <li><a href="<c:url value="/logout" />"><fmt:message key="label.logout" /></a></li>
+        <li><a href="<c:url value="/logout" />"><fmt:message key="label.logout"/></a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>

@@ -20,6 +20,10 @@
     <definition name="private/*" extends="base.definition.private">
 		<put-attribute name="body" value="/WEB-INF/views/private/{1}.jsp"></put-attribute>
 	</definition>
+	
+	<definition name="private/*/*" extends="base.definition.private">
+		<put-attribute name="body" value="/WEB-INF/views/private/{1}/{2}.jsp"></put-attribute>
+	</definition>
     
     <definition name="*/*" extends="base.definition.public">
 		<put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp"></put-attribute>

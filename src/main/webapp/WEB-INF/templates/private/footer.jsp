@@ -2,10 +2,10 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <footer class="privateFooter">
 	<div class="container">
-		<p class="text-muted"><fmt:message key="site.private.footerMessage" /></p>
+		<p class="text-muted">
+			<fmt:message key="site.private.footerMessage" />
+		</p>
 	</div>
 </footer>
-<script src="<c:url value='/resources/js/jquery.js'/>"
-	type="text/javascript"></script>
-<script src="<c:url value='/resources/js/bootstrap.js'/>"
-	type="text/javascript"></script>
+<script src="<c:url value='/resources/js/jquery-2.2.3.min.js'/>" type="text/javascript"></script>
+<script src="<c:url value='/resources/js/bootstrap.js'/>" type="text/javascript"></script>

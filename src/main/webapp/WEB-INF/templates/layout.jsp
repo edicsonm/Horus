@@ -9,6 +9,7 @@
 		
 		<link href="<c:url value='/resources/css/bootstrap.css' />"  rel="stylesheet" type="text/css"></link>
 		<link href="<c:url value='/resources/css/springmvc.css' />"  rel="stylesheet" type="text/css"></link>
+		
 	</head>
 	<body>
 		<fmt:message key="site.title" />
