@@ -3,6 +3,7 @@ package au.com.edimoto.horus.controller;
 import org.apache.log4j.Logger;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.ldap.userdetails.LdapUserDetailsImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -17,16 +18,16 @@ public class MainController {
 	@RequestMapping(value = {"/main" },method = RequestMethod.POST)
 	public String mainPost(Model model) {
 		logger.info("Entrando al controlador despues de autenticarse por el metodo post...");
-		model.addAttribute("title", "Main Page");
-		model.addAttribute("message", "This is the first page");
+		/*model.addAttribute("title", "Main Page");
+		model.addAttribute("message", "This is the first page");*/
 		return "private/main";
 	}
 	
 	@RequestMapping(value = {"/main" },method = RequestMethod.GET)
 	public String mainGet(Model model) {
 		logger.info("Entrando al controlador despues de autenticarse por el metodo get...");
-		model.addAttribute("title", "Main Page");
-		model.addAttribute("message", "This is the first page");
+		/*model.addAttribute("title", "Main Page");
+		model.addAttribute("message", "This is the first page");*/
 		return "private/main";
 	}
 	
@@ -97,9 +98,22 @@ public class MainController {
 	private String getPrincipal(){
         String userName = null;
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
- 
+        
+        logger.info(SecurityContextHolder.getContext().getAuthentication().getCredentials() != null ? SecurityContextHolder.getContext().getAuthentication().getCredentials().getClass():"Nada que mostrar ...");
+        logger.info(SecurityContextHolder.getContext().getAuthentication().getDetails() != null ?  SecurityContextHolder.getContext().getAuthentication().getDetails().getClass():"Nada que mostrar ...");
+        logger.info(SecurityContextHolder.getContext().getAuthentication().getPrincipal().getClass());
+        
+        LdapUserDetailsImpl ldapUserDetailsImpl = (LdapUserDetailsImpl)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        logger.info(ldapUserDetailsImpl.getDn());
+        
+        
+        logger.info(SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString());
+        logger.info(SecurityContextHolder.getContext().getAuthentication().getName());
+        logger.info(SecurityContextHolder.getContext().getAuthentication().getDetails().toString());
+        
         if (principal instanceof UserDetails) {
-            userName = ((UserDetails)principal).getUsername();
+        	UserDetails userDetails = ((UserDetails)principal);
+            userName = userDetails.getUsername();
         } else {
             userName = principal.toString();
         }
